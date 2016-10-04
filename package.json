@@ -1,0 +1,24 @@
+{
+  "name": "HumixAPI",
+  "version": "0.1.0",
+  "description": "A library for HumixAPI",
+  "main": "index.js",
+  "dependencies": {
+    "redis": "^2.6.2"
+  },
+  "author": {
+    "name": "Norman Kung",
+    "email": "norman@tw.ibm.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/normankung/HumixAPI.git"
+  },
+  "maintainers": [
+    {
+      "name": "norman kung",
+      "email": "kungyc@tw.ibm.com"
+    }
+  ]
+  
+}

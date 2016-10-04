@@ -1,6 +1,5 @@
 var redis = require('redis');
 var config = ("./config.js");
-var context= { "question": "請問bluemix如何計費", "conversation_id": "168b620d-37d0-49bd-b657-73e3b9eaa956", "system": { "dialog_stack": [ "node_1_1471853227574" ], "dialog_turn_counter": 1, "dialog_request_counter": 1 } };
 var redisPort = config.redisPort || "6379";
 var redisIP = config.redisIP || "127.0.0.1";
 var dbSelect=config.dbSelect||"0";
@@ -22,12 +21,12 @@ function getUserContext(userName){
 
                     if(err)
                     {
-                       // console.log(err);
+                       
                        client.end(true);
                          reject(err);
                     }
                     else {
-                        //console.log(res);
+                      
                         if(res){
                             client.end(true);
                             resolve(res);
@@ -87,14 +86,6 @@ var client = redis.createClient(redisPort,redisIP);
 
 });
 }
-// setUserContext('apple',context).then(function(res){
-
-//     console.log(res);
-//     getUserContext('apple').then(function(res){console.log(res.question)});
-
-// },function(err){
-//     console.log(err);
-// });
 
 
 module.exports={
